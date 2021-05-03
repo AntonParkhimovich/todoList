@@ -1,0 +1,154 @@
+.kanban__card {
+    position: relative;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    min-width: 330px;
+    min-height: 100px;
+    margin: 20px 0;
+    font-size: 20px;
+    text-align: left;
+    border: 2px solid deeppink;
+    border-radius: 10px;
+    background: rgb(238, 232, 232);
+    overflow: auto;
+    color: #000;
+    cursor: pointer;
+
+    &-user {
+        display: none;
+        opacity: 0;
+        font-style: italic;
+        font-weight: 600;
+    }
+
+    &-setting {
+        display: none;
+        position: absolute;
+        top: calc(50% - 72px);
+        width: 85%;
+        background: rgba(0, 0, 0, 0.8);
+        border-radius: 20px;
+        font-size: 16px;
+        text-align: left;
+        padding: 10px;
+        border: 1px solid yellow;
+        color: #fff;
+    }
+
+    &-item {
+        margin: 20px 0;
+        cursor: pointer;
+    }
+
+    &-name {
+        width: 85%;
+        font-weight: 600;
+        font-size: 22px;
+        font-style: italic;
+    }
+    
+    &-comment {
+        width: 90%;
+        margin: 10px 10px 10px 0;
+        border-top: 1px solid rgb(156, 146, 146);
+        border-bottom: 1px solid rgb(156, 146, 146);
+        padding: 10px;
+        white-space: pre-wrap;
+        display: none;
+        opacity: 0;
+        line-height: 25px;
+    }
+
+    &-date {
+        font-style: italic;
+        font-weight: 600;
+    }
+
+    &-footer {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &-close {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        width: 30px;
+        height: 30px;
+        opacity: 0.5;
+        display: none;
+        
+        &:hover {
+            opacity: 0.6;
+        }
+
+        &:before {
+            position: absolute;
+            left: 15px;
+            content: ' ';
+            height: 30px;
+            width: 2px;
+            background-color: rgb(172, 44, 44);
+            transform: rotate(45deg);
+        }
+
+        &:after {
+            position: absolute;
+            left: 15px;
+            content: ' ';
+            height: 30px;
+            width: 2px;
+            background-color: rgb(172, 44, 44);
+            transform: rotate(-45deg);
+        }
+    }    
+
+    
+    &-edit {
+        position: absolute;
+        top: calc(50% - 72px);
+        left: 5px;
+        width: 90%;
+        padding: 20px;
+        background: rgba(0, 0, 0, 0.8);
+        border-radius: 20px;
+        font-size: 20px;
+        display: none;
+        
+        &--name {
+            padding: 5px;
+            width: 97%;
+            font-size: 20px;
+            border-radius: 15px;
+            font-family: 'Gilroy';
+        }
+
+        &--comment {
+            padding: 5px;
+            margin: 10px 0;
+            width: 97%;
+            font-size: 20px;
+            border-radius: 15px;
+            resize: none;
+            font-family: 'Gilroy';
+        }
+        
+
+        &--buttons {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+
+        &--button {
+            padding: 5px;
+            font-size: 20px;
+            width: 40%;
+            border-radius: 10px;
+            font-family: 'Gilroy';
+        }
+    }
+}    
